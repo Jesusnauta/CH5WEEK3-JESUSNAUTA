@@ -1,14 +1,14 @@
 import { screen } from '@testing-library/dom';
 import '@testing-library/jest-dom';
-import { Header } from './header';
+import { Footer } from './footer';
 
-describe('Given Header component', () => {
+describe('Given Footer component', () => {
   test('should first', () => {
     document.body.innerHTML = '<slot></slot>';
-    const element = new Header('slot');
-    expect(element).toBeInstanceOf(Header);
-    const h1 = screen.getByRole('heading');
-    expect(h1).toBeInTheDocument();
+    const element = new Footer('slot');
+    expect(element).toBeInstanceOf(Footer);
+  });
+  test('It render an image in the document', () => {
     const img = screen.getByRole('img');
     expect(img).toBeInTheDocument();
   });
